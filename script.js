@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const fadingLight = document.querySelector(".fading-light");
     let opacity = 0;
-    let fadeSpeed = 0.005; // Customize the fading speed
+    let fadeSpeed = 0.004; // Customize the fading speed
     
     function fadeInOut() {
       fadingLight.style.opacity = opacity;
@@ -34,4 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
     fadeInOut();
 
     
+});
+
+var chain = $("#chains")[0];
+$(".img-wrapper").mouseenter(function() {
+    chain.currentTime = 0;
+		chain.play();
 });
