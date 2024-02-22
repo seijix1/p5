@@ -1,151 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Take Our Hearts</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take Our Hearts</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
-    <!-- CALENDARIO 
+  <!-- CALENDARIO 
     <script src="sketch.js"></script> -->
 
-    <!-- SBERLUCCICHIO -->
-    <script src="script.js"></script>
+  <!-- SBERLUCCICHIO -->
+  <script src="script.js"></script>
 
-    <script src="p5.js"></script>
-    <script>src= "p5.sound.min.js"</script>
+  <script src="p5.js"></script>
+  <script>src = "p5.sound.min.js"</script>
 </head>
 
+<!------------------------------------------------------------------------------- INIZIO DEL BODY ------------------------------------------------------------------>
+
 <body>
 
+  <div id="header">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container-lg">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="output-onlinegiftools.gif" id="logo1">
+        </a>
 
+        <a class="link-wrapper" href="https://seijix1.github.io/p5/">
+          <span class="fallback">Index</span>
+          <div class="img-wrapper">
+            <img class="normal" src="H4JD35M.png">
+            <img class="active" src="ELytdKg.png">
+          </div>
+          <div class="shape-wrapper">
+            <div class="shape red-fill jelly"><svg x="0px" y="0px" viewBox="0 0 108.1 47"
+                enable-background="new 0 0 108.1 47">
+                <polygon fill="#FF0000" points="29.5,8.5 150.7,0 108.1,32.7 3.1,47 " />
+              </svg></div>
+            <div class="shape cyan-fill jelly"><svg x="0px" y="0px" viewBox="0 0 108.1 47"
+                enable-background="new 0 0 108.1 47">
+                <polygon fill="#00FFFF" points="0.3,17 125.1,0 68.8,45.6 24.3,39 " />
+              </svg></div>
+          </div>
+        </a>
 
-<div id="header">
-  <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-    <div class="container-lg">
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="output-onlinegiftools.gif" id="logo1">
-      </a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
 
-      <a class="link-wrapper" href="https://seijix1.github.io/p5/">
-        <span class="fallback">Index</span>
-        <div class="img-wrapper">
-          <img class="normal" src="H4JD35M.png">
-          <img class="active" src="ELytdKg.png">
-        </div>
-        <div class="shape-wrapper">
-          <div class="shape red-fill jelly"><svg x="0px" y="0px"
-         viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
-        <polygon fill="#FF0000" points="29.5,8.5 150.7,0 108.1,32.7 3.1,47 "/>
-        </svg></div>
-          <div class="shape cyan-fill jelly"><svg x="0px" y="0px"
-         viewBox="0 0 108.1 47" enable-background="new 0 0 108.1 47">
-        <polygon fill="#00FFFF" points="0.3,17 125.1,0 68.8,45.6 24.3,39 "/>
-        </svg></div>
-        </div>
-      </a>
-
-    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-      <i class="bi bi-list"></i>
-    </button>
-  
-    </div>
-  </nav>  
-</div>
-
-<!-- INIZIO DEL BODY-->
-<body>
-    
-    <div class="flip-box" id="flipbox">
-      <div class="flip-box-inner">
-        <div class="flip-box-front">
-          <img src="letterasfida.png" id="lettera" style="width:350px;height:250px">
-        </div>
-        <div class="flip-box-back">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem Ipsum</p>
-        </div>
       </div>
-    </div>
-
-    <section class="design-section">
-      <div class="timeline">
-      
-                <!--Well, The reason for this div is to fill space. 
-      This space is technically used for keeping dates, 
-      but I didn't find the need for dates. However, I'll provide 
-      you the styling for dates, so that you can use it if you 
-      wanted to.-->
-                        <div class="timeline-empty">
-                        </div>
-      
-      <!--This is the class where the timeline graphics are 
-      housed in. Note that we have timeline-circle 
-      here for that pointer in timeline.-->
-      
-                     <div class="timeline-middle">
-                         <div class="timeline-circle"></div>
-                     </div>
-                     <div class="timeline-component timeline-content">
-                        <h3>01/01/2023</h3>
-                        <p>Tu sei me ed io sono te... abbiamo dato vita ad un legame rivestito della forza del cuore.</p>
-                      </div>
-                      <div class="timeline-component timeline-content">
-                         <h3>31/03/2023</h3>
-                          <p>Abbiamo visitato insieme Roma tra fiere, cinema, il buon cibo e il mastodontico centro della città.</p>
-                      </div>
-                      <div class="timeline-middle">
-                          <div class="timeline-circle"></div>
-                      </div>
-                        <div class="timeline-empty">
-                      </div>
-      
-                      <div class="timeline-empty">
-                      </div>
-      
-                     <div class="timeline-middle">
-                         <div class="timeline-circle"></div>
-                     </div>
-                     <div class=" timeline-component timeline-content">
-                      <h3>Lorem ipsum</h3>
-                      <p>Lorem ipsum.</p>
-                 </div>
-      
-             </div>
-          </div> 
-      </section>
-
-    
-
-    <!-- STELLA -->
-    <div class="container">
-      <div class="fade-container" id="lucina">
-        <img src="light.png" alt="Fading Light" class="fading-light">
-      </div>
-    </div>
-
-    
-
-    <div class="container">
-      <div class="fade-container" id="lucina2">
-        <img src="light2.png" alt="Fading Light" class="fading-light2">
-      </div>
-    </div>
-
-  <div class="container" id="frase">
-    <img class="inner-image" src="cherish.png" id="frase_dentro">   
+    </nav>
   </div>
-    
+
+
+
+  <div class="rowcolumn">
+    <!------------------------------------------------------------------------------- COLONNA DI SINISTRA ---------------------------------------------------------->
+    <div class="column left">
+      <!-- STELLA -->
+      <div class="container">
+        <div class="fade-container" id="lucina">
+          <img src="light.png" alt="Fading Light" class="fading-light">
+        </div>
+      </div>
+
+
+      <div class="frase">
+        <img class="inner-image" src="cherish.png" id="frase_dentro">
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------- COLONNA CENTRALE ------------------------------------------------------------------->
+    <div class="column middle">
+      <div class="flip-box" id="flipbox">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="letterasfida.png" id="lettera" style="width:350px;height:250px">
+          </div>
+          <div class="flip-box-back">
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <section class="design-section"> -->
+      <div class="timeline">
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"> </div>
+        </div>
+
+        <div class="timeline-component timeline-content">
+          <h3>01/01/2023</h3>
+          <p>Tu sei me ed io sono te... abbiamo dato vita ad un legame rivestito della forza del cuore.</p>
+        </div>
+
+        <div class="timeline-component timeline-content">
+          <h3>31/03/2023</h3>
+          <p>Abbiamo visitato insieme Roma tra fiere, cinema, il buon cibo e il mastodontico centro della città.</p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class=" timeline-component timeline-content">
+          <h3>28/04/2023</h3>
+          <p>Abbiamo passato la giornata a Napoli prima di tornare a casa. Stare assieme in cosplay mi piace molto!</p>
+        </div>
+
+        <div class=" timeline-component timeline-content">
+          <h3>13/05/2023</h3>
+          <p>Siamo stati al Moxy di Milano, passando delle serate fantastiche tra di noi e con tutti gli altri.</p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class=" timeline-component timeline-content">
+          <h3>23/07/2023</h3>
+          <p>Il giorno antecedente al tuo compleanno e l'inizio della nostra prima vacanza estiva!</p>
+        </div>
+
+        <div class=" timeline-component timeline-content">
+          <h3>25/11/2023</h3>
+          <p>Sono tornato a Milano e siamo stati assieme per due settimane senza il bisogno di un braccio in meno!</p>
+        </div>
+
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-empty">
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+        <div class=" timeline-component timeline-content">
+          <h3>01/01/2024</h3>
+          <p>Questa data marca un anno dall'inizio del nostro legame, e ne arriveranno molte altre!</p>
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+    <!------------------------------------------------------------------------------- COLONNA DI DESTRA ------------------------------------------------------------->
+    <div class="column right">
+      <div class="container" id="containerlucina2">
+
+        <img src="light2.png" alt="Fading Light" class="fading-light2" id="lucina2">
+        <img src="light2.png" alt="Fading Light" class="fading-light3" id="lucina3">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- </section> -->
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 <!-- FINE DEL BODY-->
@@ -153,20 +224,20 @@
 <!-- INIZIO DEL FOOTER-->
 <footer id="mainFooter">
 
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-4 text-center text-lg-start mb-3 mb-lg-0"> 
-          
-          Lorem Ipsum Dolor
-        </div>
-        <div class="col-lg-4 text-center mb-3 mb-lg-0">
-          <is class="bi bi-facebook"></i> <i class="bi bi-instagram"></i><i class="bi bi-twitter"></i>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          Lorem Ipsum Dolor
-        </div>
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-lg-4 text-center text-lg-start mb-3 mb-lg-0">
+
+        Lorem Ipsum Dolor
+      </div>
+      <div class="col-lg-4 text-center mb-3 mb-lg-0">
+        <is class="bi bi-facebook"></i> <i class="bi bi-instagram"></i><i class="bi bi-twitter"></i>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
+        Lorem Ipsum Dolor
       </div>
     </div>
-  
-  </footer>
-<!-- FINE DEL FOOTER-->
+  </div>
+
+</footer>
+<!--FINE DEL FOOTER -->

@@ -6,8 +6,15 @@
   background-position: center center;
 }
 
+
+
+
 .header img{
  height: 20px;
+}
+
+.rowcolumn{
+  height:100%;
 }
 
 body{
@@ -20,9 +27,100 @@ body{
  /* background-position: 0px 160px; */
   display: flex;
   flex-direction: column;
-  height: 100%;
-
+  min-height: 200vh;
+  position: relative;
+  overflow:visible;
  
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: inherit;
+}
+
+.left {
+  background: url(./sfondosinistra2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position-y: 20px;
+  width: 25%;
+  height: 1930px;
+  position: relative;
+  
+
+}
+
+.right {
+  background: url(./sfondodestra.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position-y: 70px;
+  background-position: right;
+  width: 25%;
+  height: 1970px;
+  position: relative;
+  
+}
+
+.middle {
+  width: 50%;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+/* ------------------------------------------------------------ STILE DELLA STELLINA ---------------------------------------------------------------------*/
+#lucina {
+  /* position: relative; */
+  position: absolute;
+   background-color: transparent;
+   width: auto;
+   height: auto;
+   display: flex;
+    justify-content: center; 
+    /*align-items: center; */
+   float: left;
+   padding: 0 100px;
+   z-index: -20;
+ }
+ 
+ #lucina2 {
+   position: absolute; 
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+     /*align-items: center; */
+    float: right;
+  /*  padding: 700px 0 0 0px; */
+    z-index: -20;
+  }
+
+  #lucina3 {
+    position: absolute; 
+     background-color: transparent;
+     width: auto;
+     height: auto;
+     display: flex;
+     justify-content: center; 
+      /*align-items: center; */
+     float: right;
+     padding: 20px 0px 0px 10px; 
+     z-index: -20;
+   }
+
+#containerlucina2{
+  position: relative;
 }
 
 #mainFooter {
@@ -31,18 +129,25 @@ body{
   padding:2rem 0;
   margin-top: auto;
   z-index: 4;
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   
+  
 }
 
-#frase{
- /* width: 50%;
-  height: 50%; */
-  z-index: 3;
- /* float: left; */
+.frase{
+  position: absolute;
+  bottom: 0px;
 }
 
 #frase_dentro{
-  width: 70%;
-  height: 70%;
+  z-index: 3;
+  width: 800px;
+  height: auto;
+ 
 }
 
 
@@ -103,34 +208,9 @@ body{
   transform: rotateY(180deg);
 }
 
-/* STILE DELLA STELLINA */
-#lucina {
- /* position: relative; */
-  background-color: transparent;
-  width: auto;
-  height: auto;
-  display: flex;
-   justify-content: center; 
-   /*align-items: center; */
-  float: left;
-  padding: 0 100px;
-  z-index: -1;
-}
-
-#lucina2 {
-  /* position: relative; */
-   background-color: transparent;
-   width: auto;
-   height: auto;
-   display: flex;
-    justify-content: center; 
-    /*align-items: center; */
-   float: right;
-   padding: 700px 0 0 0px;
-   z-index: -1;
- }
 
 
+/* ------------------------------------------------------------ BOTTONE INDEX----------------------------------------------------------------------------*/
  .link-wrapper {
   position: relative;
   display: inline-block;
@@ -273,7 +353,7 @@ body{
   100% { width: 100%; transform: scale(1.25,1) skewX(20deg) translateY(3px) rotateX(-40deg) rotateY(-10deg) rotateZ(-15deg); }
 }
 
-/* TIMELINE */
+/*------------------------------------------------------------------------------------ TIMELINE --------------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
 .design-section {
@@ -285,6 +365,7 @@ body{
   min-height: 100vh;
   padding: 100px 0;
   font-family: Jost;
+  
 }
 
 .design {
@@ -330,6 +411,8 @@ body{
   .timeline {
     display: grid;
     grid-template-columns: 1fr 3px 1fr;
+   
+    
   }
   .timeline-middle {
     position: relative;
